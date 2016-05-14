@@ -3,13 +3,15 @@
     <siteMapNode>
       <siteMapNode title="Strona głowna" url="~/Default.aspx" description="Główna strona" />
       
-        <siteMapNode title="Menu1"  description="">
-        <siteMapNode title="Menu1_1" url="~/Menu1_1.aspx"  description="" />
-        <siteMapNode title="Menu1_2" url="~/Menu1_2.aspx" description="" />
+      <siteMapNode title="O nas"  description="">
+        <siteMapNode title="Kim jesteśmy?" url="~/About.aspx"  description="" />
+        <siteMapNode title="Historia sklepu" url="" description="" />
       </siteMapNode>
-      <siteMapNode title="Menu2"  description="" >
-        <siteMapNode title="Menu2_1" url="~/Menu2_1.aspx" description="" />
-        <siteMapNode title="Menu2_2" url="~/Menu2_2.aspx" description="" />
+        
+      <siteMapNode title="Oferta" url="~/Offer.aspx" description="">
+      </siteMapNode>
+      
+      <siteMapNode title="Kontakt"  description="" >
       </siteMapNode>
     </siteMapNode>
 </siteMap>

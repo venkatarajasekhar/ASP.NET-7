@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Sklep</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-        <link rel="stylesheet" type="text/css" href="css/site.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/site.css" />
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -14,8 +14,8 @@
         <div id="top">
             <asp:ContentPlaceHolder ID="topContent" runat="server">
                 <div id="logo">
-                    <img style="float: left; margin: 0px 0px;" src="/resources/logo.jpg" width="20%" height="99%" />
-                    <h1>Gabinet stomatologiczno-protetyczny</h1>
+                    <img style="float: left; margin: 0px 0px;" src="/resources/logo.jpg" width="400px" height="99%" />
+                    <h1>Sklep</h1>
                 </div>
             </asp:ContentPlaceHolder>
         </div>
