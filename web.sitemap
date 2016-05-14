@@ -5,13 +5,17 @@
       
       <siteMapNode title="O nas"  description="">
         <siteMapNode title="Kim jesteśmy?" url="~/About.aspx"  description="" />
-        <siteMapNode title="Historia sklepu" url="" description="" />
+        <siteMapNode title="Historia sklepu" url="~/History.aspx" description="" />
       </siteMapNode>
         
       <siteMapNode title="Oferta" url="~/Offer.aspx" description="">
       </siteMapNode>
       
-      <siteMapNode title="Kontakt"  description="" >
+      <siteMapNode title="Kontakt" url="~/Contact.aspx" description="">
       </siteMapNode>
+
+      <siteMapNode title="Uzyskaj rabat" url="~/GetDiscount.aspx" description="">
+      </siteMapNode>
+      
     </siteMapNode>
 </siteMap>

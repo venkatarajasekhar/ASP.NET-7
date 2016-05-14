@@ -7,9 +7,15 @@
     <title>Sklep</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         <link rel="stylesheet" type="text/css" href="/resources/css/site.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css" />
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/resources/js/bootstrap.min.js"></script>
+
     <form id="form1" runat="server">
         <div id="top">
             <asp:ContentPlaceHolder ID="topContent" runat="server">
@@ -38,7 +44,7 @@
             </asp:ContentPlaceHolder>
         </div>
 
-        <div id="main">
+        <div id="main" class="container">
             <asp:ContentPlaceHolder ID="mainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
