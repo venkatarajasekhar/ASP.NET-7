@@ -18,6 +18,8 @@
             <asp:BoundField
                 DataField="Description"
                 HeaderText="Opis" />
+            <asp:BoundField HeaderText="Tagi" DataField="Tags" />
+
         </Fields>
     </asp:DetailsView>
 </asp:Content>

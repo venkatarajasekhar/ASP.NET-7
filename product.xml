@@ -6,5 +6,10 @@
     <Category>Kawy i herbaty</Category>
     <Amount>500</Amount>
     <Description>Naturalna kawa zbozowa firmy XYZ</Description>
+    <Tags>
+      <Tag>Kawa</Tag>
+      <Tag>Napój</Tag>
+      <Tag>Produkt zbożowy</Tag>
+    </Tags>
   </Product>
 </Products>

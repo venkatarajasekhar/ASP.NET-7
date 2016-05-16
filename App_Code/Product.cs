@@ -17,7 +17,8 @@ public class Product
     public string Category { get; set; }
     public int Amount { get; set; }
     public string Description { get; set; }
-
+    public Tags Tags { get; set; }
+ 
     public void SetId(int id)
     {
         if (Id == 0)
@@ -28,7 +29,7 @@ public class Product
 
     public Product()
     {
-      
+
     }
 
 
