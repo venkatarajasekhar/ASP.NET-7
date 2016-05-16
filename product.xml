@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0"?>
 <Products>
-  <Product Id="1">
+  <Product>
+    <Id>1</Id>
     <Name>Kawa zbożowa XYZ - 500g</Name>
     <Price>20</Price>
     <Category>Kawy i herbaty</Category>
@@ -10,6 +11,29 @@
       <Tag>Kawa</Tag>
       <Tag>Napój</Tag>
       <Tag>Produkt zbożowy</Tag>
+    </Tags>
+  </Product>
+  <Product>
+    <Id>2</Id>
+    <Name>Kardamon - 200g</Name>
+    <Price>30</Price>
+    <Category>Przyprawy</Category>
+    <Amount>100</Amount>
+    <Description>Nasiona kardamonu w opakowaniu, 200 gram </Description>
+    <Tags>
+      <Tag>Przyprawy</Tag>
+      <Tag>Nasiona</Tag>
+    </Tags>
+  </Product>
+  <Product>
+    <Id>3</Id>
+    <Name>Sok z granatu - 1l</Name>
+    <Price>30</Price>
+    <Category>Soki</Category>
+    <Amount>20</Amount>
+    <Description>Sok z granatu </Description>
+    <Tags>
+      <Tag>Soki</Tag>
     </Tags>
   </Product>
 </Products>
