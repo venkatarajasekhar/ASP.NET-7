@@ -9,6 +9,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        {
+            Time.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
 
     }
 }
+
+  

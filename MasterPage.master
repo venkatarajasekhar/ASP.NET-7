@@ -57,9 +57,20 @@
 
         <div id="footer">
             <hr />
-            Stopka.
             <asp:ContentPlaceHolder ID="footerContent" runat="server">
-            </asp:ContentPlaceHolder>
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="Timer" EventName="tick" />
+            </Triggers>
+
+            <ContentTemplate>
+                <asp:Timer ID="Timer" runat="server" Interval="1"></asp:Timer>
+                <asp:Label ID="Time" runat="server" Text="Time"></asp:Label>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        </asp:ContentPlaceHolder>
         </div>
     </form>
 </body>
