@@ -16,7 +16,7 @@
                     <asp:LinkButton ID="Detail" runat="server"
                         CommandArgument='<%#Eval("Id")%>' 
                         Text="Szczegóły"
-                         />
+                        OnClick="DetailButtonClicked" />
 
                 </ItemTemplate>
 

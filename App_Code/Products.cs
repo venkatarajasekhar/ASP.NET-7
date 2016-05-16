@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 public class Products
 {
     [XmlElement("Product")]
-    public Product[] products { get; set; }
+    public Product[] content { get; set; }
 
     public Products()
     {

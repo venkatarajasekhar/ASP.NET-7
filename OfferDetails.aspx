@@ -14,7 +14,7 @@
                 HeaderText="Kategoria" />
             <asp:BoundField
                 DataField="Amount"
-                HeaderText="Ilość" />" />
+                HeaderText="Ilość" />
             <asp:BoundField
                 DataField="Description"
                 HeaderText="Opis" />
