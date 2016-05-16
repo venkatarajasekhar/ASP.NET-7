@@ -21,7 +21,7 @@
                 <asp:RegularExpressionValidator ID="emailValidator"
                     runat="server" ErrorMessage="Nieprawidłowy adres e-mail."
                     ControlToValidate="emailTb"
-                    ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" Display="Dynamic"/>
+                    ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" Display="Dynamic" />
                 <asp:RequiredFieldValidator runat="server" ID="emailRequiredFieldValidator"
                     ControlToValidate="emailTb" ErrorMessage="Podaj adres e-mail." Display="Dynamic" />
                 <br />
@@ -32,7 +32,7 @@
                     ValidationExpression="^[1-9][0-9]{8}$" ControlToValidate="phoneTb" Display="Dynamic">
                 </asp:RegularExpressionValidator>
                 <asp:RequiredFieldValidator runat="server" ID="phoneRequiredFieldValidator"
-                    ControlToValidate="emailTb" ErrorMessage="Podaj telefon." Display="Dynamic"/>
+                    ControlToValidate="emailTb" ErrorMessage="Podaj telefon." Display="Dynamic" />
                 <br />
                 Nowy klient:
                 <asp:DropDownList ID="isNewClientDdl" runat="server" OnSelectedIndexChanged="viewSelect_SelectedIndexChanged" AutoPostBack="True">
@@ -78,7 +78,7 @@
                     <asp:ListItem>Bardzo słaba</asp:ListItem>
                 </asp:DropDownList>
                 <br />
-                                <asp:Button runat="server" CssClass="btn btn-success" Text="Zatwierdź" OnClick="OnClick" />
+                <asp:Button runat="server" CssClass="btn btn-success" Text="Zatwierdź" OnClick="OnClick" />
 
                 <br />
             </asp:View>

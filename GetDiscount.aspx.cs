@@ -29,15 +29,11 @@ public partial class Menu1_1 : System.Web.UI.Page
     }
 
     protected void OnClick(object sender, EventArgs e)
-    { 
-        if (Page.IsValid)
-        {
-            Server.Transfer("~/History.aspx");
-        }
-        else
-        {
-            validationLabel.Text = "Błędnie wypełniony formularz.";
-            Server.Transfer("~/About.aspx");
-        }
+    {
+        Session["forename"] = forenameTb.Text;
+        Session["surname"] = surnameTb.Text;
+        Session["phone"] = phoneTb.Text;
+        Session["mail"] = emailTb.Text;
+       Server.Transfer("~/GetDiscount-summary.aspx");
     }
 }
