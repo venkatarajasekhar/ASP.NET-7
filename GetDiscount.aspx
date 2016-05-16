@@ -3,48 +3,36 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="mainContent" runat="Server">
     <div class="text-align-left">
         <asp:Label runat="server" ID="validationLabel"></asp:Label>
-        <form method="post">
-            <fieldset>
-          <legend>Add Customer</legend>
-          <div>
-            <label for="CompanyName">Company Name:</label>
-            <input type="text" name="CompanyName" value="" />
-          </div>
-          <div>
-            <label for="ContactName">Contact Name:</label>
-            <input type="text" name="ContactName" value="" />
-          </div>
-          <div>
-            <label for="Employees">Employee Count:</label>
-            <input type="text" name="Employees" value="" />
-          </div>
-          <div>
-            <label>&nbsp;</label>
-            <input type="submit" value="Submit" class="submit" />
-          </div>
-        </fieldset>
-        </form>            
+
         <asp:MultiView ID="multiView1" runat="server" ActiveViewIndex="0">
             <asp:View ID="mainView" runat="server">
                 Imię:
         <asp:TextBox ID="forenameTb" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="forenameRequiredValidator"
+                    ControlToValidate="forenameTb" ErrorMessage="Podaj imię." />
                 <br />
                 Nazwisko:
         <asp:TextBox ID="surnameTb" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="surenameRequiredValidator"
+                    ControlToValidate="surnameTb" ErrorMessage="Podaj nazwisko." />
                 <br />
                 Email:
         <asp:TextBox ID="emailTb" runat="server"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="validateEmail"
+                <asp:RegularExpressionValidator ID="emailValidator"
                     runat="server" ErrorMessage="Nieprawidłowy adres e-mail."
                     ControlToValidate="emailTb"
-                    ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" />
+                    ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" Display="Dynamic"/>
+                <asp:RequiredFieldValidator runat="server" ID="emailRequiredFieldValidator"
+                    ControlToValidate="emailTb" ErrorMessage="Podaj adres e-mail." Display="Dynamic" />
                 <br />
                 Telefon:
         <asp:TextBox ID="phoneTb" runat="server"></asp:TextBox>
-                <asp:RegularExpressionValidator runat="server" ID="validate"
+                <asp:RegularExpressionValidator runat="server" ID="phoneValidator"
                     ErrorMessage="Numer telefonu powinien zawierać 9 cyfr bez zera na początku."
-                    ValidationExpression="^[1-9][0-9]{8}$" ControlToValidate="phoneTb">
+                    ValidationExpression="^[1-9][0-9]{8}$" ControlToValidate="phoneTb" Display="Dynamic">
                 </asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator runat="server" ID="phoneRequiredFieldValidator"
+                    ControlToValidate="emailTb" ErrorMessage="Podaj telefon." Display="Dynamic"/>
                 <br />
                 Nowy klient:
                 <asp:DropDownList ID="isNewClientDdl" runat="server" OnSelectedIndexChanged="viewSelect_SelectedIndexChanged" AutoPostBack="True">
@@ -90,6 +78,7 @@
                     <asp:ListItem>Bardzo słaba</asp:ListItem>
                 </asp:DropDownList>
                 <br />
+                                <asp:Button runat="server" CssClass="btn btn-success" Text="Zatwierdź" OnClick="OnClick" />
 
                 <br />
             </asp:View>
@@ -117,10 +106,10 @@
                 Ile średnio wydajesz na zakupach ?
                 <asp:TextBox runat="server"></asp:TextBox>
                 <br />
-                
-                <asp:Button runat="server" CssClass="btn btn-success" Text="Zatwierdź" OnClick="OnClick"/>
 
+                <asp:Button runat="server" CssClass="btn btn-success" Text="Zatwierdź" OnClick="OnClick" />
                 <br />
+
             </asp:View>
         </asp:MultiView>
     </div>

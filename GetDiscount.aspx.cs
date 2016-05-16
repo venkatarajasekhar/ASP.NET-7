@@ -32,12 +32,12 @@ public partial class Menu1_1 : System.Web.UI.Page
     { 
         if (Page.IsValid)
         {
-            Server.Transfer("/Default.aspx");
+            Server.Transfer("~/History.aspx");
         }
         else
         {
             validationLabel.Text = "Błędnie wypełniony formularz.";
-            Server.Transfer("/About.aspx");
+            Server.Transfer("~/About.aspx");
         }
     }
 }
