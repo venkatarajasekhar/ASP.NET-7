@@ -13,6 +13,6 @@ public partial class GetDiscountSummary : System.Web.UI.Page
         surnameLb.Text = Session["surname"].ToString();
         mailLb.Text = Session["mail"].ToString();
         phoneLb.Text = Session["phone"].ToString();
-        codeLb.Text = new Random(10).Next(1000, 100000).ToString();
+        codeLb.Text = new Random(Convert.ToInt32(phoneLb.Text)).Next(1000, 100000).ToString();
     }
 }

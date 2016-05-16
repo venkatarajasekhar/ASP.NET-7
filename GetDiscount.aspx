@@ -32,7 +32,7 @@
                     ValidationExpression="^[1-9][0-9]{8}$" ControlToValidate="phoneTb" Display="Dynamic">
                 </asp:RegularExpressionValidator>
                 <asp:RequiredFieldValidator runat="server" ID="phoneRequiredFieldValidator"
-                    ControlToValidate="emailTb" ErrorMessage="Podaj telefon." Display="Dynamic" />
+                    ControlToValidate="phoneTb" ErrorMessage="Podaj telefon." Display="Dynamic" />
                 <br />
                 Nowy klient:
                 <asp:DropDownList ID="isNewClientDdl" runat="server" OnSelectedIndexChanged="viewSelect_SelectedIndexChanged" AutoPostBack="True">
