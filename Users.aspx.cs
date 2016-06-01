@@ -21,14 +21,14 @@ public partial class Users : System.Web.UI.Page
     {
         var row = GridView1.SelectedRow;
         var val = row.Cells[0].Text;
-        current = db.user_select_by_id(int.Parse(val));
+        current = db.users_select_by_id(int.Parse(val));
         Panel1.DataBind();
     }
 
     protected void Add_Click(object sender, EventArgs e)
     {
         db.users_insert(tbim.Text, tbnazw.Text, int.Parse(tbwiek.Text), tbnazwa.Text);
-        Response.Redirect("Users", false);
+        Response.Redirect("Users.aspx", false);
 
     }
 
@@ -37,7 +37,7 @@ public partial class Users : System.Web.UI.Page
         var row = GridView1.SelectedRow;
         var val = row.Cells[0].Text;
         db.users_update(int.Parse(val), tbim.Text, tbnazw.Text, int.Parse(tbwiek.Text), tbnazwa.Text);
-        Response.Redirect("Users", false);
+        Response.Redirect("Users.aspx", false);
     }
 
     protected void Delete_Click(object sender, EventArgs e)
@@ -45,6 +45,6 @@ public partial class Users : System.Web.UI.Page
         var row = GridView1.SelectedRow;
         var val = row.Cells[0].Text;
         db.users_delete(int.Parse(val));
-        Response.Redirect("Users", false);
+        Response.Redirect("Users.aspx", false);
     }
 }

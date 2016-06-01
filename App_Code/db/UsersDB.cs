@@ -35,11 +35,11 @@ public class UsersDB
         return usersList;
     }
 
-    public UserDetails user_select_by_id(int id)
+    public UserDetails users_select_by_id(int id)
     {
         SqlConnection connection = new SqlConnection(connectionString);
         SqlCommand command = new SqlCommand("users_select_by_id", connection);
-        command.Parameters.AddWithValue("@id", id);
+        command.Parameters.AddWithValue("@param1", id);
         command.CommandType = System.Data.CommandType.StoredProcedure;
         connection.Open();
         SqlDataReader dr = command.ExecuteReader();
@@ -57,7 +57,7 @@ public class UsersDB
     {
         SqlConnection connection = new SqlConnection(connectionString);
         SqlCommand command = new SqlCommand("users_delete", connection);
-        command.Parameters.AddWithValue("@id", id);
+        command.Parameters.AddWithValue("@param1", id);
         command.CommandType = System.Data.CommandType.StoredProcedure;
         connection.Open();
         command.ExecuteNonQuery();
@@ -69,10 +69,10 @@ public class UsersDB
     {
         SqlConnection connection = new SqlConnection(connectionString);
         SqlCommand command = new SqlCommand("users_insert", connection);
-        command.Parameters.AddWithValue("@firstname", firstname);
-        command.Parameters.AddWithValue("@lastname", lastname);
-        command.Parameters.AddWithValue("@age", age);
-        command.Parameters.AddWithValue("@username", username);
+        command.Parameters.AddWithValue("@FirstName", firstname);
+        command.Parameters.AddWithValue("@LastName", lastname);
+        command.Parameters.AddWithValue("@Age", age);
+        command.Parameters.AddWithValue("@UserName", username);
         command.CommandType = System.Data.CommandType.StoredProcedure;
         connection.Open();
         command.ExecuteNonQuery();
