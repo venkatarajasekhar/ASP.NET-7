@@ -33,7 +33,7 @@ public partial class UsersCities : System.Web.UI.Page
             SqlDataSource1.InsertParameters.Add("lastname", NewLastName.Text);
             SqlDataSource1.InsertParameters.Add("age", System.Data.DbType.Int32, NewAge.Text);
             SqlDataSource1.InsertParameters.Add("username", NewUsername.Text);
-            SqlDataSource1.InsertParameters.Add("idcity", System.Data.DbType.Int32, DropDownList2.SelectedValue.ToString());
+            SqlDataSource1.InsertParameters.Add("city_id", System.Data.DbType.Int32, DropDownList2.SelectedValue.ToString());
             SqlDataSource1.Insert();
         }
     }
