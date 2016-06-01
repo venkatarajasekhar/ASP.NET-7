@@ -75,15 +75,8 @@
 
                         </FooterTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="IdCity" SortExpression="IdCity" Visible="False">
-                        <EditItemTemplate>
-                            <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("city_id") %>'></asp:TextBox>
-                        </EditItemTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label6" runat="server" Text='<%# Bind("city_id") %>'></asp:Label>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Name" SortExpression="Name">
+                
+                    <asp:TemplateField HeaderText="City" SortExpression="City">
                         <EditItemTemplate>
                             <asp:Panel runat="server">
                                 <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%#Bind("city_id")%>' DataValueField="Id" DataTextField="Name" DataSourceID="SqlDataSource2">
@@ -139,7 +132,7 @@
                     <asp:ControlParameter Name="lastname" ControlID="GridView1$NewLastName" PropertyName="Text" DefaultValue="dfddf" />
                     <asp:ControlParameter Name="age" ControlID="GridView1$NewAge" PropertyName="Text" DefaultValue="11" />
                     <asp:ControlParameter Name="username" ControlID="GridView1$NewUsername" PropertyName="Text" DefaultValue="dfdf" />
-                    <asp:ControlParameter Name="idcity" ControlID="GridView1$Newcity_id" PropertyName="Text" DefaultValue="0" />
+                    <asp:ControlParameter Name="city_id" ControlID="GridView1$Newcity_id" PropertyName="Text" DefaultValue="0" />
 
                 </InsertParameters>
                 <UpdateParameters>

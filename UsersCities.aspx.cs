@@ -35,6 +35,7 @@ public partial class UsersCities : System.Web.UI.Page
             SqlDataSource1.InsertParameters.Add("username", NewUsername.Text);
             SqlDataSource1.InsertParameters.Add("city_id", System.Data.DbType.Int32, DropDownList2.SelectedValue.ToString());
             SqlDataSource1.Insert();
+            Response.Redirect("UsersCities.aspx", false);
         }
     }
 
@@ -52,6 +53,7 @@ public partial class UsersCities : System.Web.UI.Page
             SqlDataSource3.InsertParameters.Add("name", NewName.Text);
             SqlDataSource3.InsertParameters.Add("shortname", NewShortName.Text);
             SqlDataSource3.Insert();
+            Response.Redirect("UsersCities.aspx", false);
         }
 
     }
