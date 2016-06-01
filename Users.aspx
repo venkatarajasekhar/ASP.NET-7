@@ -23,21 +23,21 @@
     
     </div>
         <asp:Panel ID="Panel1" runat="server" Height="217px">
-            Imię:<asp:TextBox Text="<%# current.FirstName %>" ID="tbim" runat="server"></asp:TextBox>
+            Imię:<asp:TextBox Text="<%# current.FirstName %>" ID="tbim" runat="server" columns="30"></asp:TextBox>
             <br />
             <br />
-            Nazwisko:<asp:TextBox Text="<%# current.LastName %>" ID="tbnazw" runat="server"></asp:TextBox>
+            Nazwisko:<asp:TextBox Text="<%# current.LastName %>" ID="tbnazw" runat="server" columns="30"></asp:TextBox>
             <br />
             <br />
             Wiek:
-            <asp:TextBox ID="tbwiek" Text="<%# current.Age %>" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbwiek" Text="<%# current.Age %>" runat="server" columns="30"></asp:TextBox>
             <br />
             <br />
-            Nazwa użytkownika:
-            <asp:TextBox ID="tbnazwa" Text="<%# current.UserName %>" runat="server"></asp:TextBox>
+            Nazwa:
+            <asp:TextBox ID="tbnazwa" Text="<%# current.UserName %>" runat="server" columns="30"></asp:TextBox>
             <br />
-            <asp:Button ID="Add" runat="server" Text="Dodaj" OnClick="Add_Click" />
             <asp:Button ID="Update" runat="server" Text="Zmień" OnClick="Update_Click" />
+            <asp:Button ID="Add" runat="server" Text="Dodaj" OnClick="Add_Click" />
             <asp:Button ID="Delete" runat="server" Text="Usuń" OnClick="Delete_Click" />
             
         </asp:Panel>
